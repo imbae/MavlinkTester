@@ -1,0 +1,149 @@
+﻿<UserControl
+    x:Class="MavlinkTester.View.SysStatusView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MavlinkTester.View"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="570">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel
+                Margin="20">
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Onboard Control Sensors Present"
+                        Width="200" />
+                    <Label
+                        Content="{Binding OnboardControlSensorsPresent}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Onboard Control Sensors Enabled"
+                        Width="200" />
+                    <Label
+                        Content="{Binding OnboardControlSensorsEnabled}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Onboard Control Sensors Health"
+                        Width="200" />
+                    <Label
+                        Content="{Binding OnboardControlSensorsHealth}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Load"
+                        Width="200" />
+                    <Label
+                        Content="{Binding Load}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Voltage Battery"
+                        Width="200" />
+                    <Label
+                        Content="{Binding VoltageBattery}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Current Battery"
+                        Width="200" />
+                    <Label
+                        Content="{Binding CurrentBattery}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Battery Remaining"
+                        Width="200" />
+                    <Label
+                        Content="{Binding BatteryRemaining}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Drop Rate Comm"
+                        Width="200" />
+                    <Label
+                        Content="{Binding DropRateComm}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Errors Comm"
+                        Width="200" />
+                    <Label
+                        Content="{Binding ErrorsComm}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Errors Count1"
+                        Width="200" />
+                    <Label
+                        Content="{Binding ErrorsCount1}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Errors Count2"
+                        Width="200" />
+                    <Label
+                        Content="{Binding ErrorsCount2}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Errors Count3"
+                        Width="200" />
+                    <Label
+                        Content="{Binding ErrorsCount3}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Errors Count4"
+                        Width="200" />
+                    <Label
+                        Content="{Binding ErrorsCount4}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        
+    </Grid>
+</UserControl>

@@ -1,0 +1,116 @@
+﻿<UserControl
+    x:Class="MavlinkTester.View.ServoOutputRawView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MavlinkTester.View"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="570">
+    <Grid>
+        <StackPanel
+            Margin="20">
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Time Usec"
+                    Width="100" />
+                <Label
+                    Content="{Binding TimeUsec}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Port"
+                    Width="100" />
+                <Label
+                    Content="{Binding Port}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Servo1 Raw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Servo1Raw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Servo2 Raw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Servo2Raw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Servo3 Raw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Servo3Raw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Servo4 Raw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Servo4Raw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Servo5 Raw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Servo5Raw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Servo6 Raw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Servo6Raw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Servo7 Raw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Servo7Raw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Servo8 Raw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Servo8Raw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

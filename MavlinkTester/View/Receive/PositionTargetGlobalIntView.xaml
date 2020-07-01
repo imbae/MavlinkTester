@@ -1,0 +1,168 @@
+﻿<UserControl
+    x:Class="MavlinkTester.View.PositionTargetGlobalIntView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MavlinkTester.View"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="570">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel
+                Margin="20">
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Time Boot Ms"
+                        Width="100" />
+                    <Label
+                        Content="{Binding TimeBootMs}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Coordinate Frame"
+                        Width="100" />
+                    <Label
+                        Content="{Binding CoordinateFrame}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Type Mask"
+                        Width="100" />
+                    <Label
+                        Content="{Binding TypeMask}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Lat Int"
+                        Width="100" />
+                    <Label
+                        Content="{Binding LatInt}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Lon Int"
+                        Width="100" />
+                    <Label
+                        Content="{Binding LonInt}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Alt"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Alt}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Vx"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Vx}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Vy"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Vy}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Alt"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Alt}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Vz"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Vz}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Afx"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Afx}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Afy"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Afy}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Afz"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Afz}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Yaw"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Yaw}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="YawRate"
+                        Width="100" />
+                    <Label
+                        Content="{Binding YawRate}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,86 @@
+﻿<UserControl
+    x:Class="MavlinkTester.View.LocalPositionNedView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MavlinkTester.View"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="570">
+    <Grid>
+        <StackPanel
+            Margin="20">
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Time Boot Ms"
+                    Width="100" />
+                <Label
+                    Content="{Binding TimeBootMs}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="X"
+                    Width="100" />
+                <Label
+                    Content="{Binding X}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Y"
+                    Width="100" />
+                <Label
+                    Content="{Binding Y}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Z"
+                    Width="100" />
+                <Label
+                    Content="{Binding Z}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Vx"
+                    Width="100" />
+                <Label
+                    Content="{Binding Vx}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Vy"
+                    Width="100" />
+                <Label
+                    Content="{Binding Vy}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Vz"
+                    Width="100" />
+                <Label
+                    Content="{Binding Vz}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,86 @@
+﻿<UserControl
+    x:Class="MavlinkTester.View.AttitudeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MavlinkTester.View"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="570">
+    <Grid>
+        <StackPanel
+            Margin="20">
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Time Boot Ms"
+                    Width="100" />
+                <Label
+                    Content="{Binding TimeBootMs}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Roll"
+                    Width="100" />
+                <Label
+                    Content="{Binding Roll}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Pitch"
+                    Width="100" />
+                <Label
+                    Content="{Binding Pitch}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Yaw"
+                    Width="100" />
+                <Label
+                    Content="{Binding Yaw}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Roll speed"
+                    Width="100" />
+                <Label
+                    Content="{Binding Rollspeed}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Pitch speed"
+                    Width="100" />
+                <Label
+                    Content="{Binding Pitchspeed}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Yaw speed"
+                    Width="100" />
+                <Label
+                    Content="{Binding Yawspeed}"
+                    HorizontalAlignment="Left" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

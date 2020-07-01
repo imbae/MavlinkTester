@@ -1,0 +1,168 @@
+﻿<UserControl
+    x:Class="MavlinkTester.View.HighresImuView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MavlinkTester.View"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="570">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel
+                Margin="20">
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Time Usec"
+                        Width="100" />
+                    <Label
+                        Content="{Binding TimeUsec}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Xacc"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Xacc}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Yacc"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Yacc}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Zacc"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Zacc}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Xgyro"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Xgyro}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Ygyro"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Ygyro}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Zgyro"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Zgyro}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Xmag"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Xmag}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Ymag"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Ymag}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Zmag"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Zmag}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Abs Pressure"
+                        Width="100" />
+                    <Label
+                        Content="{Binding AbsPressure}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Diff Pressure"
+                        Width="100" />
+                    <Label
+                        Content="{Binding DiffPressure}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Pressure Alt"
+                        Width="100" />
+                    <Label
+                        Content="{Binding PressureAlt}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Temperature"
+                        Width="100" />
+                    <Label
+                        Content="{Binding Temperature}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Fields Updated"
+                        Width="100" />
+                    <Label
+                        Content="{Binding FieldsUpdated}"
+                        HorizontalAlignment="Left" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>       
+    </Grid>
+</UserControl>

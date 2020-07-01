@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <PackageId>UavGen</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mavlinkobjectgenerator\mavlinkobjectgenerator.csproj" />
+  </ItemGroup>
+</Project>

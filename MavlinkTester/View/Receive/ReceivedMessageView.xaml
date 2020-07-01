@@ -1,0 +1,118 @@
+﻿<UserControl
+    x:Class="MavlinkTester.View.ReceivedMessageView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MavlinkTester.View"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="780">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="210" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <ListView
+            x:Name="Menu_ListView"
+            Margin="5"
+            SelectedIndex="{Binding SelectedListViewIndex}">
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="HEARTBEAT"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="SYS STATUS"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="GPS RAW INT"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="ATTITUDE"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="LOCAL POSITION NED"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="SERVO OUTPUT RAW"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="VFR HUD"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="POSITION TARGET GLOBAL INT"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="HIGHRES IMU"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="ALTITUDE"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="BATTERY STATUS"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+        </ListView>
+
+        <Grid
+            Grid.Column="1">
+            <ContentControl
+                Content="{Binding SelectedControl.Content}" />
+        </Grid>
+    </Grid>
+</UserControl>
