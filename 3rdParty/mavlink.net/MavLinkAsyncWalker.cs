@@ -55,7 +55,18 @@ namespace MavLinkNet
         /// <param name="buffer">The buffer to process</param>
         public override void ProcessReceivedBytes(byte[] buffer, int start, int length)
         {
-            mProcessStream.Write(buffer, 0, buffer.Length);
+            try
+            {
+                mProcessStream.Write(buffer, 0, buffer.Length);
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            catch (InternalBufferOverflowException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
 
 

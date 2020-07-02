@@ -45,6 +45,8 @@ namespace MavLinkNet
 
         public override void Initialize()
         {
+            mIsActive = true;
+
             InitializeMavLink();
             InitializeSerialPort(SerialPortName);
         }

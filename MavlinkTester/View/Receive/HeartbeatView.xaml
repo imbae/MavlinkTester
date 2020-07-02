@@ -55,10 +55,10 @@
                 Orientation="Horizontal"
                 Height="30">
                 <Label
-                    Content="Cusutom Mode"
+                    Content="Custom Mode"
                     Width="100" />
                 <Label
-                    Content="{Binding CusutomMode}"
+                    Content="{Binding CustomMode}"
                     HorizontalAlignment="Left" />
             </StackPanel>
             <StackPanel

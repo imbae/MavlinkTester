@@ -7,6 +7,7 @@
     xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:model="clr-namespace:MavlinkTester.Model"
     xmlns:converter="clr-namespace:MavlinkTester.Converter"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:local="clr-namespace:MavlinkTester"
     xmlns:View="clr-namespace:MavlinkTester.View"
     x:Class="MavlinkTester.MainWindow"
@@ -21,6 +22,8 @@
                 x:Key="SerialConnectItem" />
             <converter:NotConverter
                 x:Key="NotConverter" />
+            <converter:InverseBoolToVisConverter
+                x:Key="InverseBoolToVisConverter" />
         </ResourceDictionary>
     </Controls:MetroWindow.Resources>
 
@@ -85,13 +88,37 @@
                 SelectedItem="{Binding SelectedBaudrate, Source={StaticResource SerialConnectItem}}"
                 Grid.RowSpan="2" />
             <Button
-                Content="연결"
+                Content="Connect"
                 HorizontalAlignment="Right"
                 Margin="0,10,10,10"
                 Width="75"
                 Command="{Binding ConnectMavlink_Command}"
                 CommandParameter="{DynamicResource SerialConnectItem}"
-                Grid.RowSpan="2" />
+                Grid.RowSpan="2"
+                Controls:ControlsHelper.ContentCharacterCasing="Normal"
+                Visibility="{Binding IsMavlinkConnected, Converter={StaticResource InverseBoolToVisConverter}}"/>
+            <Button
+                Content="Disconnect"
+                HorizontalAlignment="Right"
+                Margin="0,10,10,10"
+                Width="75"
+                Command="{Binding DisconnectMavlink_Command}"
+                Grid.RowSpan="2"
+                Controls:ControlsHelper.ContentCharacterCasing="Normal"
+                Visibility="{Binding IsMavlinkConnected, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            <Button
+                Style="{StaticResource MahApps.Styles.Button.Circle}"
+                Margin="0,10,300,8"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Right"
+                Width="42"
+                Command="{Binding RefreshComport_Command}"
+                CommandParameter="{DynamicResource SerialConnectItem}">
+                <iconPacks:PackIconModern
+                    Width="20"
+                    Height="20"
+                    Kind="Refresh" />
+            </Button>
 
             <Separator
                 Margin="10,25,10,0"

@@ -8,7 +8,7 @@ namespace MavlinkTester.ViewModel
     {
         private enum ControlIndex
         {
-            HeartBeat = 0,
+            Heartbeat = 0,
             SysStatus,
             GpsRawInt,
             Attitude,
@@ -21,18 +21,20 @@ namespace MavlinkTester.ViewModel
             BatteryStatus
         }
 
+        #region Binding Field
+
         private ControlItem selectedControl;
         private int selectedListViewIndex;
 
         public ControlItem SelectedControl { get { return selectedControl; } set { selectedControl = value; OnPropertyChanged("SelectedControl"); } }
         public int SelectedListViewIndex { get { return selectedListViewIndex; } set { selectedListViewIndex = value; ChangedControl(value); OnPropertyChanged("SelectedListViewIndex"); } }
         public ControlItem[] ControlItems { get; set; }
-       
+
+        #endregion
 
         public ReceivedMessageViewModel()
         {
             InitializeControl();
-
             SelectedListViewIndex = 0;
         }
 
@@ -40,7 +42,7 @@ namespace MavlinkTester.ViewModel
         {
             ControlItems = new[]
             {
-                new ControlItem (ControlIndex.HeartBeat.ToString(), new HeartbeatView { DataContext = new HeartbeatViewModel() } ),
+                new ControlItem (ControlIndex.Heartbeat.ToString(), new HeartbeatView { DataContext = new HeartbeatViewModel() } ),
                 new ControlItem (ControlIndex.SysStatus.ToString(), new SysStatusView { DataContext = new SysStatusViewModel() } ),
                 new ControlItem (ControlIndex.GpsRawInt.ToString(), new GpsRawIntView { DataContext = new GpsRawIntViewModel() } ),
                 new ControlItem (ControlIndex.Attitude.ToString(), new AttitudeView { DataContext = new AttitudeViewModel() } ),

@@ -9,6 +9,40 @@
     d:DesignHeight="360"
     d:DesignWidth="780">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="210" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <ListView
+            x:Name="Menu_ListView"
+            Margin="5"
+            SelectedIndex="{Binding SelectedListViewIndex}">
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="HEARTBEAT"
+                        VerticalContentAlignment="Center"/>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Label
+                        Content="LOITER (CUSTOM)"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </ListViewItem>
+        </ListView>
+
+        <Grid
+            Grid.Column="1">
+            <ContentControl
+                Content="{Binding SelectedControl.Content}" />
+        </Grid>
+
 
     </Grid>
 </UserControl>

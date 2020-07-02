@@ -1,0 +1,130 @@
+﻿<UserControl
+    x:Class="MavlinkTester.View.SetHeartbeatView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:converter="clr-namespace:MavlinkTester.Converter"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:MavlinkTester.View"
+    mc:Ignorable="d"
+    d:DesignHeight="360"
+    d:DesignWidth="570">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converter:NotConverter
+                x:Key="NotConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <StackPanel
+            Margin="20,20,0,20"
+            HorizontalAlignment="Left"
+            Width="265">
+            <StackPanel
+                Margin="0,0,0,5"
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Type"
+                    Width="120" />
+                <Controls:NumericUpDown
+                    Value="{Binding Type}"
+                    Width="120" />
+            </StackPanel>
+            <StackPanel
+                Margin="0,0,0,5"
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Autopilot"
+                    Width="120" />
+                <Controls:NumericUpDown
+                    Value="{Binding Autopilot}"
+                    Width="120" />
+            </StackPanel>
+            <StackPanel
+                Margin="0,0,0,5"
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Base Mode"
+                    Width="120" />
+                <Controls:NumericUpDown
+                    Value="{Binding BaseMode}"
+                    Width="120" />
+            </StackPanel>
+            <StackPanel
+                Margin="0,0,0,5"
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="System Status"
+                    Width="120" />
+                <Controls:NumericUpDown
+                    Value="{Binding SystemStatus}"
+                    Width="120" />
+            </StackPanel>
+            <StackPanel
+                Margin="0,0,0,5"
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Custom Mode"
+                    Width="120" />
+                <Controls:NumericUpDown
+                    Value="{Binding CustomMode}"
+                    Width="120" />
+            </StackPanel>
+            <StackPanel
+                Margin="0,0,0,5"
+                Orientation="Horizontal"
+                Height="30">
+                <Label
+                    Content="Mavlink Version"
+                    Width="120" />
+                <Controls:NumericUpDown
+                    Value="{Binding MavlinkVersion}"
+                    Width="120" />
+            </StackPanel>
+
+            <Button
+                Margin="10"
+                Content="Set"
+                Command="{Binding SetHeartbeat_Command}"
+                Width="150"
+                Height="30" />
+        </StackPanel>
+
+        <Button
+            Content="Start"
+            HorizontalAlignment="Right"
+            Margin="0,10,10,0"
+            Width="100"
+            Command="{Binding StartHeartbeat_Command}"
+            Height="40"
+            VerticalAlignment="Top"
+            IsEnabled="{Binding IsEnabledHeartbeat, Converter={StaticResource NotConverter}}" />
+        <Button
+            Content="Stop"
+            HorizontalAlignment="Right"
+            Margin="0,55,10,0"
+            Width="100"
+            Command="{Binding StopHeartbeat_Command}"
+            Height="40"
+            VerticalAlignment="Top"
+            IsEnabled="{Binding IsEnabledHeartbeat}" />
+
+        <iconPacks:PackIconModern
+            Width="20"
+            Height="20"
+            Kind="Timer"
+            Foreground="Goldenrod"
+            Margin="0,20,125,0"
+            HorizontalAlignment="Right"
+            Visibility="{Binding IsTimerTick, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+    </Grid>
+</UserControl>

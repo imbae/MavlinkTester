@@ -13,14 +13,14 @@ namespace MavlinkTester.ViewModel
         private byte autopilot;
         private byte baseMode;
         private byte systemStatus;
-        private uint cusutomMode;
+        private uint customMode;
         private byte mavlinkVersion;
 
         public byte Type { get { return type; } set { type = value; OnPropertyChanged("Type"); } }
         public byte Autopilot { get { return autopilot; } set { autopilot = value; OnPropertyChanged("Autopilot"); } }
         public byte BaseMode { get { return baseMode; } set { baseMode = value; OnPropertyChanged("BaseMode"); } }
         public byte SystemStatus { get { return systemStatus; } set { systemStatus = value; OnPropertyChanged("SystemStatus"); } }
-        public uint CusutomMode { get { return cusutomMode; } set { cusutomMode = value; OnPropertyChanged("CusutomMode"); } }
+        public uint CustomMode { get { return customMode; } set { customMode = value; OnPropertyChanged("CustomMode"); } }
         public byte MavlinkVersion { get { return mavlinkVersion; } set { mavlinkVersion = value; OnPropertyChanged("MavlinkVersion"); } }
 
         #endregion
@@ -38,7 +38,7 @@ namespace MavlinkTester.ViewModel
             Autopilot = Convert.ToByte(heartbeat.Autopilot);
             BaseMode = Convert.ToByte(heartbeat.BaseMode);
             SystemStatus = Convert.ToByte(heartbeat.SystemStatus);
-            CusutomMode = heartbeat.CustomMode;
+            CustomMode = heartbeat.CustomMode;
             MavlinkVersion = heartbeat.MavlinkVersion;
         }
 

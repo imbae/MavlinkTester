@@ -88,6 +88,8 @@ namespace MavlinkTester.Model
                     Debug.WriteLine(packet.MessageId);
                     break;
             }
+
+            MavlinkReceivedEvent?.Invoke(packet.Message);
         }
 
 
@@ -95,6 +97,7 @@ namespace MavlinkTester.Model
 
         public delegate void MessageDelegate(UasMessage msg);
 
+        public event MessageDelegate MavlinkReceivedEvent;
         public event MessageDelegate HeartbeatEvent;
         public event MessageDelegate SysStatusEvent;
         public event MessageDelegate GpsRawIntEvent;
