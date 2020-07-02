@@ -46,7 +46,6 @@ namespace MavlinkTester.ViewModel
             heartbeatTimer.Elapsed += HeartbeatTimer_Elapsed;
         }
 
-        
 
         public ICommand SetHeartbeat_Command { get; private set; }
         public ICommand StartHeartbeat_Command { get; private set; }
@@ -87,8 +86,6 @@ namespace MavlinkTester.ViewModel
 
             IsTimerTick = !IsTimerTick;
         }
-
-
 
 
         #region Property Changed Event

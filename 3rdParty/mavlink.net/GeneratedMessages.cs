@@ -28520,6 +28520,187 @@ namespace MavLinkNet
         private FenceBreach mBreachType;
     }
 
+    /// <summary>
+    /// Custom loiter mission for Brains Lab. 
+    /// </summary>
+    public class UasCustomLoiter : UasMessage
+    {
+        /// <summary>
+        /// latitude(2e-9rad)
+        /// </summary>
+        public Int32 Lat
+        {
+            get { return mLat; }
+            set { mLat = value; NotifyUpdated(); }
+        }
+
+        /// <summary>
+        /// longitude(2e-9rad)
+        /// </summary>
+        public Int32 Lon
+        {
+            get { return mLon; }
+            set { mLon = value; NotifyUpdated(); }
+        }
+
+        /// <summary>
+        /// approach altitude(cm)
+        /// </summary>
+        public Int32 ApproachAlt
+        {
+            get { return mApproachAlt; }
+            set { mApproachAlt = value; NotifyUpdated(); }
+        }
+
+        /// <summary>
+        /// loitering altitude(cm)
+        /// </summary>
+        public Int32 LoiterAlt
+        {
+            get { return mLoiterAlt; }
+            set { mLoiterAlt = value; NotifyUpdated(); }
+        }
+
+        /// <summary>
+        /// radius(cm) of turn : CW turn for positive radius, CCW for negative ratius
+        /// </summary>
+        public Int32 LoiterRadius
+        {
+            get { return mLoiterRadius; }
+            set { mLoiterRadius = value; NotifyUpdated(); }
+        }
+
+        /// <summary>
+        /// [0:7] Altitude_type, [8:31] Reference_altitude
+        /// </summary>
+        public Int32 Bitfield
+        {
+            get { return mBitfield; }
+            set { mBitfield = value; NotifyUpdated(); }
+        }
+
+        /// <summary>
+        /// approach speed(cm/s)
+        /// </summary>
+        public Int16 ApproachSpeed
+        {
+            get { return mApproachSpeed; }
+            set { mApproachSpeed = value; NotifyUpdated(); }
+        }
+
+        /// <summary>
+        /// loitering speed(cm/s)
+        /// </summary>
+        public Int16 LoiterSpeed
+        {
+            get { return mLoiterSpeed; }
+            set { mLoiterSpeed = value; NotifyUpdated(); }
+        }
+
+        public UasCustomLoiter()
+        {
+            mMessageId = 180;
+            CrcExtra = 113;
+        }
+
+        internal override void SerializeBody(BinaryWriter s)
+        {
+            s.Write(mLat);
+            s.Write(mLon);
+            s.Write(mApproachAlt);
+            s.Write(mLoiterAlt);
+            s.Write(mLoiterRadius);
+            s.Write(mBitfield);
+            s.Write(mApproachSpeed);
+            s.Write(mLoiterSpeed);
+        }
+
+        internal override void DeserializeBody(BinaryReader s)
+        {
+            this.mLat = s.ReadInt32();
+            this.mLon = s.ReadInt32();
+            this.mApproachAlt = s.ReadInt32();
+            this.mLoiterAlt = s.ReadInt32();
+            this.mLoiterRadius = s.ReadInt32();
+            this.mBitfield = s.ReadInt32();
+            this.mApproachSpeed = s.ReadInt16();
+            this.mLoiterSpeed = s.ReadInt16();
+        }
+
+        protected override void InitMetadata()
+        {
+            mMetadata = new UasMessageMetadata()
+            {
+                Description = "Custom loiter mission for Brains Lab. "
+            };
+
+            mMetadata.Fields.Add(new UasFieldMetadata()
+            {
+                Name = "Lat",
+                Description = "latitude(2e-9rad)",
+                NumElements = 1,
+            });
+
+            mMetadata.Fields.Add(new UasFieldMetadata()
+            {
+                Name = "Lon",
+                Description = "longitude(2e-9rad)",
+                NumElements = 1,
+            });
+
+            mMetadata.Fields.Add(new UasFieldMetadata()
+            {
+                Name = "ApproachAlt",
+                Description = "approach altitude(cm)",
+                NumElements = 1,
+            });
+
+            mMetadata.Fields.Add(new UasFieldMetadata()
+            {
+                Name = "LoiterAlt",
+                Description = "loitering altitude(cm)",
+                NumElements = 1,
+            });
+
+            mMetadata.Fields.Add(new UasFieldMetadata()
+            {
+                Name = "LoiterRadius",
+                Description = "radius(cm) of turn : CW turn for positive radius, CCW for negative ratius",
+                NumElements = 1,
+            });
+
+            mMetadata.Fields.Add(new UasFieldMetadata()
+            {
+                Name = "Bitfield",
+                Description = "[0:7] Altitude_type, [8:31] Reference_altitude",
+                NumElements = 1,
+            });
+
+            mMetadata.Fields.Add(new UasFieldMetadata()
+            {
+                Name = "ApproachSpeed",
+                Description = "approach speed(cm/s)",
+                NumElements = 1,
+            });
+
+            mMetadata.Fields.Add(new UasFieldMetadata()
+            {
+                Name = "LoiterSpeed",
+                Description = "loitering speed(cm/s)",
+                NumElements = 1,
+            });
+
+        }
+
+        private Int32 mLat;
+        private Int32 mLon;
+        private Int32 mApproachAlt;
+        private Int32 mLoiterAlt;
+        private Int32 mLoiterRadius;
+        private Int32 mBitfield;
+        private Int16 mApproachSpeed;
+        private Int16 mLoiterSpeed;
+    }
 
     // ___________________________________________________________________________________
 

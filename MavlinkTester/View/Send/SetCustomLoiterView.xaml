@@ -4,11 +4,134 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:local="clr-namespace:MavlinkTester.View"
     mc:Ignorable="d"
     d:DesignHeight="360"
     d:DesignWidth="570">
     <Grid>
-
+        <ScrollViewer
+            Margin="20,20,285,20">
+            <StackPanel
+               
+                HorizontalAlignment="Left"
+                Width="275">
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Lat"
+                        Width="120" />
+                    <Controls:NumericUpDown
+                        Value="{Binding Lat}"
+                        Width="120"
+                        Interval="0.0001" />
+                </StackPanel>
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Lon"
+                        Width="120" />
+                    <Controls:NumericUpDown
+                        Value="{Binding Lon}"
+                        Width="120"
+                        Interval="0.0001" />
+                </StackPanel>
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Approach Alt"
+                        Width="120" />
+                    <Controls:NumericUpDown
+                        Value="{Binding ApproachAlt}"
+                        Width="120" />
+                </StackPanel>
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Loiter Alt"
+                        Width="120" />
+                    <Controls:NumericUpDown
+                        Value="{Binding LoiterAlt}"
+                        Width="120" />
+                </StackPanel>
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Approach Speed"
+                        Width="120" />
+                    <Controls:NumericUpDown
+                        Value="{Binding ApproachSpeed}"
+                        Width="120" />
+                </StackPanel>
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Loiter Speed"
+                        Width="120" />
+                    <Controls:NumericUpDown
+                        Value="{Binding LoiterSpeed}"
+                        Width="120" />
+                </StackPanel>
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Loiter Radius"
+                        Width="120" />
+                    <Controls:NumericUpDown
+                        Value="{Binding LoiterRadius}"
+                        Width="120" />
+                </StackPanel>
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Altitude Type"
+                        Width="120" />
+                    <ComboBox
+                        VerticalAlignment="Bottom"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        ItemsSource="{Binding AltitudeTypeCollection}"
+                        SelectedIndex="{Binding AltitudeType}"
+                        Width="120"
+                        Height="30" />
+                </StackPanel>
+                <StackPanel
+                    Margin="0,0,0,5"
+                    Orientation="Horizontal"
+                    Height="30">
+                    <Label
+                        Content="Reference Altitude"
+                        Width="120" />
+                    <Controls:NumericUpDown
+                        Value="{Binding ReferenceAltitude}"
+                        Width="120" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+       
+        <Button
+            Margin="0,10,10,0"
+            Content="Send"
+            Command="{Binding SendCustomLoiter_Command}"
+            Width="100"
+            HorizontalAlignment="Right"
+            Height="40"
+            VerticalAlignment="Top" />
     </Grid>
 </UserControl>
