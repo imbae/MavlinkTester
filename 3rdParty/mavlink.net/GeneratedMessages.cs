@@ -28597,6 +28597,12 @@ namespace MavLinkNet
             set { mLoiterSpeed = value; NotifyUpdated(); }
         }
 
+        public byte Rsvd
+        {
+            get { return mRsvd; }
+            set { mRsvd = value; NotifyUpdated(); }
+        }
+
         public UasCustomLoiter()
         {
             mMessageId = 180;
@@ -28613,6 +28619,7 @@ namespace MavLinkNet
             s.Write(mBitfield);
             s.Write(mApproachSpeed);
             s.Write(mLoiterSpeed);
+            s.Write(mRsvd);
         }
 
         internal override void DeserializeBody(BinaryReader s)
@@ -28625,6 +28632,7 @@ namespace MavLinkNet
             this.mBitfield = s.ReadInt32();
             this.mApproachSpeed = s.ReadInt16();
             this.mLoiterSpeed = s.ReadInt16();
+            this.mRsvd = s.ReadByte();
         }
 
         protected override void InitMetadata()
@@ -28700,6 +28708,7 @@ namespace MavLinkNet
         private Int32 mBitfield;
         private Int16 mApproachSpeed;
         private Int16 mLoiterSpeed;
+        private byte mRsvd;
     }
 
     // ___________________________________________________________________________________

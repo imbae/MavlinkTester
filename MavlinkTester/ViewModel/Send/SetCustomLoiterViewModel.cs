@@ -62,8 +62,8 @@ namespace MavlinkTester.ViewModel
 
         private void InitializeData()
         {
-            Lat = 34.3435;
-            Lon = 34.3435;
+            Lat = 35.164615;
+            Lon = 128.127188;
             ApproachAlt = 100;
             LoiterAlt = 100;
             ApproachSpeed = 23;
